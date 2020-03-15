@@ -1,0 +1,306 @@
+
+body        { font-family: 'NanumSquare', sans-serif; }
+.normal     { font-weight: 400; font-size : 18px; }
+.bold       { font-weight: 700; }
+.bolder     { font-weight: 800 }
+.light      { font-weight: 300 }
+
+#container {
+  background-color : #e3fef2;
+  height : 100%;
+  width : 100%;
+  margin: 0;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  position : fixed;
+  display: flex;
+  flex-direction : row;
+  font-family: 'NanumSquare', sans-serif;
+}
+
+.box .pc{
+  display : inline;
+
+}
+.box .mobile{
+  display : none;
+}
+#header{
+  display: flex;
+  flex : 0 0 430px;
+  flex-direction : column;
+  /* border : 1px solid red; */
+  text-align: left;
+  color: #371db4;
+  width  : 30%;
+  /* border : 1px purple solid; */
+}
+
+
+#content{
+  display: flex;
+  flex : 1;
+  flex-direction : column;
+  /* border : 1px solid black; */
+  text-align: left;
+  color: #371db4;
+  /* border : 1px solid green; */
+}
+#box-container{
+  display: flex;
+  flex-direction : column;
+  /* border : 1px dashed darkcyan; */
+  margin-top : 108px;
+  margin-right : 200px;
+}
+.box{
+  margin-bottom : 27px;
+  width: 1287px;
+  height: 46px;
+  border: solid 1px #371db4;
+  background-color: #ffffff;
+  align-items: center;
+}
+.mail-title{
+  margin-left : 19px;
+}
+
+.go-back{
+  /* border : 1px solid blue; */
+  width : 36px;
+  height : 42px;
+  margin-top : 131px;
+  margin-left : 140px;
+}
+.title-section{
+  padding-top:97px;
+  /* border : 1px solid yellow;   */
+  margin-left : 140px;
+}
+.title{
+  /* border : 1px dashed pink; */
+  font-size : 30px;
+}
+.subtitle{
+  /* border : 1px dashed blue; */
+  padding : 0px;
+  font-size: 18px;
+}
+#navigation{
+  display:flex;
+  flex-direction : row;
+  margin-top : 47px;
+  /* border : 1px dashed blue; */
+}
+.nav-content{
+  border : 1px solid orange;
+  margin-right : 31px;
+  width: 15px;
+  height: 27px;
+  font-size : 25px;
+  background : #FF00000;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: center;
+  /* color: #371db4; */
+}
+
+
+.custom-pagination .page-number{
+    display: inline-block;
+    /* padding: 5px 12px; */
+    /* background: #afffe6; */
+    margin: 0px 10px;
+    width : 40px;
+    height : 40px;
+         /* width: 0;
+      height: 0;
+      border-top: 50px solid transparent;
+      border-right: 100px solid red;
+      border-bottom: 50px solid transparent; */
+}
+
+.page-number.current{
+    background: #ffffff!important;
+}
+#triangle{
+  position : absolute;
+  margin-top : -15px;
+  margin-left : 5px;
+  width: 0 ;
+  height: 0 ;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid rgba(55, 29, 180, 0.16);
+  transform : rotate(50deg);
+}
+.page-number span{
+    display: block;
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    margin-left : 10px;
+    margin-top : 10px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.pagination-previous,.pagination-next{
+    display: inline-block;
+    font-weight: bold;
+}
+ .mail-title{
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.94;
+  letter-spacing: normal;
+  text-align: left;
+  color: #371db4;
+ }
+
+  /* a:link { color: #371db4; text-decoration: none; }
+  a:visited { color: #371db4; text-decoration: none; }
+  a:hover { color: #371db4;text-decoration: underline; }
+  a:active { color: #371db4; } */
+   /* 별로라고 하면 주석을 풀고 밑을 주석 */
+
+  a:link { color: #371db4; text-decoration: none; }
+  a:visited { color: #371db4; text-decoration: none; }
+
+  .box:hover a .mail-title{
+    color: #ffffff;
+  }
+
+  .box:hover{
+  background-color: #371db4;
+}
+
+  .box:active a .mail-title{
+    color: #ffffff;
+  }
+
+  .box:active{
+  background-color: #371db4;
+}
+@media ( max-width: 768px) {
+  #container{
+    flex-direction : column;
+    width : 100%;
+    margin : 0;
+    padding : 0;
+    align-items: center;
+    justify-content: center;
+  }
+  #box-container{
+    width : 100%;
+    margin : 0;
+    padding : 0;
+    /* border: 1px red solid; */
+  }
+  .box{
+    width : 100%;
+    padding : 0;
+    height : 61px;
+  }
+  #content{
+    width  : 82%;
+    align-items: center;
+    justify-content: center;
+    margin-top : 37px;
+  }
+  #header{
+    width : 82%;
+    flex-direction : row;
+    flex : 0;
+    /* align-items: center; */
+    justify-content : center;
+    align-items: center;
+    margin-top : 66px;
+  }
+  .go-back{
+  /* border : 1px solid blue; */
+  height : 31px;
+  width : auto;
+  flex : 1px;
+  margin-top : 0px;
+  /* border : 1px solid red; */
+  margin-left : 0px;
+}
+.title-section{
+  padding-top: 0px;
+  /* border : 1px solid yellow;   */
+  /* margin-left : 140px; */
+  margin-top : 0px;
+  margin-left: 0px;
+  flex : 1;
+}
+.title{
+  /* border : 1px dashed pink; */
+  font-size : 30px;
+  display : none;
+}
+.subtitle{
+  /* border : 1px dashed blue; */
+  margin-left : 30px;
+  padding : 0px;
+  font-size: 18px;
+  align-items: center;
+  justify-content : center;
+}
+#container{
+  background-color: #ffffff;
+}
+#box-container{
+  text-align : center;
+
+}
+.box .pc{
+  display: none;
+}
+.box .mobile{
+  display: inline;
+  font-size  : 15px;
+  flex-direction : column;
+  line-height: 10px;
+  text-align : center;
+}
+.box{
+  width : 100%;
+  height : 61px;
+  /* 요게 원래 디자인이여 */
+  /* box-shadow: 10px 3px 6px 0 rgba(0, 160, 142, 0.73); */
+  box-shadow: 10px 3px 6px 0 rgba(0, 160, 142, 0.293);
+  border: solid 1px #371db4;
+  background-color: rgba(29, 180, 128, 0.08);
+}
+.mail-title{
+  margin-left : 0px;
+  text-align : center;
+}
+  .box:hover a .mail-title{
+    color: #ffffff;
+  }
+
+  .box:hover{
+  background-color: #371db4;
+  box-shadow: none;
+}
+
+  .box:active a .mail-title{
+    color: #ffffff;
+  }
+
+  .box:active{
+  background-color: #371db4;
+}
+.special{
+  margin-top : 12px;
+}
+}

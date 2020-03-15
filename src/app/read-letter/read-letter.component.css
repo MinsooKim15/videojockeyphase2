@@ -1,0 +1,96 @@
+
+body        { font-family: 'NanumSquare', sans-serif; }
+.normal     { font-weight: 400; font-size : 18px; }
+.bold       { font-weight: 700; }
+.bolder     { font-weight: 800 }
+.light      { font-weight: 300 }
+
+#container{
+  height : 217px;
+  left: 0;
+  bottom: 0;
+  right : 0;
+  width: 100vw;
+  background-color: rgba(149, 252, 205, 0.26);
+  padding : 0;
+  margin : 0;
+  float:left;
+  /* border: 3px solid  red; */
+}
+#container:hover{
+  background-color: #371db4;
+}
+#container:active{
+  background-color: #371db4;
+}
+#content{
+  margin : auto;
+  width : 50%;
+  /* position: absolute; */
+  /* top: 50%; */
+  /* -ms-transform: translateY(-50%); */
+  /* transform: translateY(-50%); */
+  /* vertical-align: middle; */
+  /* vertical-align: middle; */
+  /* border: 3px solid  green; */
+  /* padding: 10px; */
+  margin-top : 77px;
+  font-stretch: normal;
+  /* font-style: normal; */
+  /* line-height: 2.33; */
+  /* letter-spacing: normal; */
+  /* text-align: center; */
+  /* color: #ffffff; */
+  /* border: 3px solid  green; */
+}
+
+.title {
+  /* font-family: NanumSquareR; */
+  font-size: 30px;
+  /* font-weight: normal; */
+  /* font-stretch: normal; */
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: center;
+  color: #371db4;
+  padding : 0;
+  margin : 0;
+  border :0 ;
+  /* border: 3px solid green; */
+}
+#container:hover .title{
+  text-shadow: 10px 3px 20px rgba(255, 255, 255, 0.16);
+  -webkit-text-stroke: 1px #e3fef2;
+  color: #ffffff;
+}
+#container:hover .subtitle{
+  -webkit-text-stroke: 1px #707070;
+    color: #ffffff;
+}
+#container:active .title{
+  text-shadow: 10px 3px 20px rgba(255, 255, 255, 0.16);
+  -webkit-text-stroke: 1px #e3fef2;
+  color: #ffffff;
+}
+#container:active .subtitle{
+  -webkit-text-stroke: 1px #707070;
+    color: #ffffff;
+}
+
+.subtitle {
+  padding : 0;
+  padding-top : 10 px;
+  margin : 0;
+  /* font-family: NanumSquareR; */
+  /* font-size: 18px; */
+  /* font-weight: normal; */
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.94;
+  letter-spacing: normal;
+  text-align: center;
+  color: #371db4;
+
+  /* border : 3px solid purple; */
+}

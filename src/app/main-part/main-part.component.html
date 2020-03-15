@@ -1,0 +1,387 @@
+<div id ="container">
+  <div id="container-for-icons">
+      <!-- <div id = "background-left">  -->
+      <div id= "pentagon1"></div>
+
+      <div id = "bigCircle1"></div>
+      <div id= "bigCircle2"></div>
+      <div id= "smallCircle1"></div>
+
+      <div id= "pentagon2"></div>
+      <div id= "smallCircle2"></div>
+      <div id= "smallCircle3"></div>
+    <!-- </div> -->
+
+  <div id="container-real">
+      <div id = "header">
+      <img class ="tape"
+      src="https://firebasestorage.googleapis.com/v0/b/videojockey-883a1.appspot.com/o/invalid-name.png?alt=media&token=c9393c3f-ec7f-4ac6-93be-04eda262ccd6"
+      srcset = "https://firebasestorage.googleapis.com/v0/b/videojockey-883a1.appspot.com/o/invalid-name%402x.png?alt=media&token=6707afc3-1879-469b-9af5-b1e88a08ad29 2x,    https://firebasestorage.googleapis.com/v0/b/videojockey-883a1.appspot.com/o/invalid-name%403x.png?alt=media&token=1201a758-0052-4ec2-ab35-40a81e8bab4a 3x">
+      <img class = "title" src="https://firebasestorage.googleapis.com/v0/b/videojockey-883a1.appspot.com/o/KakaoTalk_Photo_2020-02-09-16-27-24.png?alt=media&token=9687c0f8-9e53-4caa-be64-014171e0ffa3" >
+    </div>
+    <div id= "content">
+        <div class= "description normal part1">
+          지친 당신의 편안한 주말을 함께할 <br>
+          비디오 쟈-키 입니다. <br>
+          매주 영화와 드라마를 추천해드려요! <br>
+        </div>
+
+      <div class= "description part2 bold">
+        금요일 저녁 7시
+      </div>
+
+      <div class= "description body part3">
+        비디오쟈-키의 한땀 한땀 콘텐츠 큐레이션이 <br>
+        당신의 메일함으로 찾아 갑니다.
+      </div>
+
+      </div>
+
+
+    <div id="subscription">
+      <!-- 요 밑은 기존 wix 코드임. 일단은 손 안대고 다음에 수정하는 것이 목표 -->
+          <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
+      <style>
+      #stb_subscribe * {
+          margin: 0;
+          padding: 0;
+          font-size: 14px;
+          border:0;
+          color:#333;
+          box-sizing: border-box;
+      }
+      #stb_subscribe {
+          width: 100%;
+          background-color: #fff;
+          border: none #b4b4b4;
+          padding: 30px;
+          margin: 0;
+          box-sizing: border-box;
+      }
+
+      #stb_subscribe .stb_header {
+          width: 100%;
+          overflow: hidden;
+          text-align: left;
+          padding-bottom: 40px;
+      }
+
+      #stb_subscribe .stb_header img {
+          display: inline-block;
+          max-width: 100%;
+          height: auto;
+      }
+
+      #stb_subscribe .stb_form_title {
+          font-size: 24px;
+          padding-bottom: 30px;
+          color: #333;
+      }
+
+      #stb_subscribe .stb_form_description {
+          padding-bottom: 40px;
+          font-size: 14px;
+          line-height: 1.71;
+          color: #333;
+      }
+
+      #stb_subscribe .stb_form_description a {
+          text-decoration: underline;
+          color: #3e81f6;
+      }
+
+      #stb_subscribe .stb_form_set {
+          padding-bottom: 25px;
+          overflow: hidden;
+          position: relative;
+      }
+
+      #stb_subscribe .stb_form_set .stb_form_set_label {
+          padding-bottom: 10px;
+              color: #371db4;
+              /* font-style: italic; */
+              font-size: 18px;
+          display: block;
+              text-align: center;
+              font-family: 'Karla', sans-serif;
+
+      }
+
+      #stb_subscribe .stb_form_set .stb_form_set_input {
+          display: block;
+          width: 100%;
+          padding: 9px 10px;
+          border: none;
+              border-radius: 4px;
+              background-color: #d9ffee;
+              font-color: #2cacc3;
+              font-family: 'Karla', sans-serif;
+              border-radius: 10px;
+      }
+
+      #stb_subscribe .stb_form_msg_error {
+          display: none;
+          color: #f95a1f;
+          padding: 5px 0;
+          font-size: 12px;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+      }
+
+      #stb_subscribe .stb_form_policy  {
+          position: relative;
+          padding-bottom: 30px;
+      }
+
+      #stb_subscribe .stb_form_policy label input {
+          width: 16px;
+          height: 16px;
+          margin: 0 3px 0 0;
+      }
+
+      #stb_subscribe .stb_form_policy label button {
+          color: #3e81f6;
+          cursor:pointer;
+          background: none;
+          text-decoration: underline;
+      }
+      #stb_form_done {
+        text-align:center;
+        font-size:13px;
+        color: #ff3366;
+        font-family:helvetica neue, helvetica, arial, verdana, sans-serif;
+      }
+
+
+      #stb_subscribe .stb_form_modal {position: fixed;width: 100%;height: 100%;top: 0;left: 0;z-index: 100000;}
+      #stb_subscribe .stb_form_modal.blind {display: none!important;}
+      #stb_subscribe .stb_form_modal_bg {position: absolute;width: 100%;height: 100%;background: #000;opacity: .5;z-index: 1;}
+      #stb_subscribe .stb_form_modal_body {background: #fff;width: 94%;max-width: 500px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);z-index: 10;}
+      #stb_subscribe .stb_form_modal_title {font-size: 18px;padding: 30px;color:#333;}
+      #stb_subscribe .stb_form_modal_text {font-size: 14px;line-height: 1.71;color:#333;margin: 0 30px;max-height: 200px;overflow-y: auto;}
+      #stb_subscribe .stb_form_modal_btn {padding: 30px;text-align: center;}
+      #stb_subscribe .stb_form_modal_btn button {width: 100px;height: 40px;line-height: 40px;font-size: 14px;background: #e6e6eb;color:#333;
+          cursor:pointer;}
+
+      #stb_subscribe .stb_form_set_submit {
+          padding-top: 10px;
+      }
+
+      #stb_subscribe .stb_form_submit_button {
+          width: 100%;
+          height: 48px;
+          background: #371db4;
+          font-size: 18px;
+          color:#fff;
+          padding: 0 22px;
+          cursor:pointer;
+              /* font-style: italic; */
+          font-family: 'NanumSquare', sans-serif;
+          border-radius: 10px;
+          box-shadow: rgba(179, 148, 242, 0.7) 8px 8px 19px 0px;
+      }
+      #stb_form_submit_button:hover {
+        Background-color: yellow;
+      }
+
+      #stb_subscribe .stb_form_result {
+          display: none;
+          padding: 20px 0 0 0;
+          text-align: left;
+      }
+
+      #stb_subscribe .stb_form_result p {
+          line-height: 1.4;
+      }
+
+      #stb_subscribe .stb_form_result.fail p {
+          color: #f95a1f;
+      }
+
+      #stb_subscribe .stb_form_result.success p {
+          color: #3e81f6;
+      }
+      </style>
+          <div id="stb_subscribe">
+
+              <form action="https://stibee.com/api/v1.0/lists/tsnBhVYz3gO7bWI6sWPFYsGSVD6R/public/subscribers" method="POST" target="_blank" accept-charset="utf-8" class="stb_form" name="stb_subscribe_form" id="stb_subscribe_form" novalidate="">
+
+
+                  <fieldset class="stb_form_set">
+                      <label for="stb_email" class="stb_form_set_label bold">이메일 주소</label>
+                      <input type="email" class="stb_form_set_input" id="stb_email" name="email">
+
+                      <div class="stb_form_msg_error" id="stb_email_error"></div>
+                  </fieldset>
+
+                  <fieldset class="stb_form_set_submit">
+                      <button type="submit" class="stb_form_submit_button" id="stb_form_submit_button" style="background-color: rgb(55, 29, 180); color: rgb(255, 255, 255)"
+      >구독하기</button>
+                  </fieldset>
+              </form>
+              <div class="stb_form_result" id="stb_form_result">
+              </div>
+          </div>
+          <div id ="stb_form_done">
+          </div>
+
+      <script>
+        var STBSUBFORM = {
+            init: function () {
+                var errorMsgs = document.getElementsByClassName('stb_form_msg_error');
+                errorMsgs = [].slice.call(errorMsgs);
+                for (var index = 0; index < errorMsgs.length; index++) {
+                    errorMsgs[index].style.display = 'none';
+                }
+                var resultDom = document.getElementById('stb_form_result');
+                resultDom.style.display = 'none';
+                resultDom.className = resultDom.className.replace('success', '');
+                resultDom.className = resultDom.className.replace('fail', '');
+            },
+            formRequest: function (e) {
+                e.preventDefault();
+                STBSUBFORM.init();
+
+                var value = STBSUBFORM.getValue();
+                if (STBSUBFORM.validate(value)) {
+                    var value = STBSUBFORM.serializeValue(value);
+                    value = value.replace('&policy=stb_policy_true', '');
+                    var endpoint = STBSUBFORM.form.action;
+                    STBSUBFORM.xhrRequest(endpoint, value);
+                }
+            },
+            validateEmail: function (email) {
+                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(String(email).toLowerCase());
+            },
+            validate: function (values) {
+                for (var index = 0; index < values.length; index++) {
+                    var item = values[index];
+                    if (item.id === 'stb_email' && item.value.length === 0) {
+                        STBSUBFORM.showError(item.id, '이메일 주소를 입력하세요.');
+                        return false;
+                    }
+                    if (item.id === 'stb_email' && !STBSUBFORM.validateEmail(item.value)) {
+                        STBSUBFORM.showError(item.id, '잘못된 이메일 주소입니다.');
+                        return false;
+                    }
+                    if (item.id === 'stb_policy' && !item.checked) {
+                        STBSUBFORM.showError(item.id, '다시 입력해주세요.');
+                        return false;
+                    }
+                }
+                return true;
+            },
+            showError: function (itemId, msg) {
+                var domName = itemId + '_error';
+                var dom = document.getElementById(domName);
+                dom.innerText = msg;
+                dom.style.display = 'block';
+            },
+            xhrRequest: function (endpoint, value) {
+                if (window.XDomainRequest) {
+                    var xdr = new XDomainRequest();
+                    xdr.open("POST", endpoint);
+                    xdr.onload = function () {
+                        if (xdr.responseText.indexOf('@ERROR_MSG') !== -1) {
+                            STBSUBFORM.showResult(xdr.responseText, 'fail');
+                        } else {
+                            STBSUBFORM.showResult(xdr.responseText, 'success');
+                        }
+                    };
+                    setTimeout(function () {
+                        xdr.send(value);
+                    }, 0);
+                } else {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", endpoint, true);
+                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                    xhr.onreadystatechange = function () {
+                        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                            if (this.response.indexOf('@ERROR_MSG') !== -1) {
+                                STBSUBFORM.showResult(this.response, 'fail');
+                            } else {
+                                STBSUBFORM.showResult(this.response, 'success');
+                            }
+                        }
+                    }
+                    xhr.send(value);
+                }
+            },
+            serializeValue: function (nodeList) {
+                nodeList = [].slice.call(nodeList);
+                var serializeText = '';
+                for (var index = 0; index < nodeList.length; index++) {
+                    var itemKey = nodeList[index].id.replace('stb_', '');
+                    serializeText += itemKey + '=';
+                    serializeText += encodeURIComponent(nodeList[index].value);
+                    if (index + 1 !== nodeList.length) {
+                        serializeText += '&';
+                    }
+                }
+                return serializeText;
+            },
+            getValue: function () {
+                var inputValues = document.querySelectorAll('input');
+                return inputValues;
+            },
+            showResult: function (response, status) {
+                var resMsg;
+                var changeResult = document.getElementById('stb_subscribe_form');
+                var resultDom = document.getElementById('stb_form_result');
+                var target = document.getElementById('stb_form_done');
+                var successMsg = '*구독완료*<br>메일함에서 <strong>웰컴 메일</strong>을 확인해 주세요!&nbsp;';
+                if (status === 'fail') {
+                    var resMsg = '<p>' + response.split('ERROR_MSG:')[1].split('-->')[0] + '</p>';
+                } else {
+                    var resMsg = response.split('<div class="msg">')[1].split('</div>')[0];
+                }
+                resultDom.style.display = 'block';
+
+                if (status === 'success') {
+                    resultDom.className += ' success';
+                    changeResult.style.display = 'none';
+                    target.innerHTML = successMsg;
+                    target.style.display = 'block';
+                    resultDom.innerHTML = '';
+                } else if (status === 'fail') {
+                    resultDom.className += ' fail';
+                    resultDom.innerHTML = resMsg;
+                }
+            },
+            openModal: function () {
+                var modal = document.getElementById('stb_form_modal');
+                modal.className = modal.className.replace('blind', '');
+            },
+            closeModal: function () {
+                var modal = document.getElementById('stb_form_modal');
+                modal.className += ' blind';
+            },
+            form: document.getElementById('stb_subscribe_form'),
+            modalOpenButton: document.getElementById('stb_form_modal_open'),
+            modalCloseButton: document.getElementById('stb_form_modal_close'),
+            modalBgButton: document.getElementById('stb_form_modal_bg'),
+        }
+
+        STBSUBFORM.form.addEventListener('submit', STBSUBFORM.formRequest);
+        if (STBSUBFORM.modalOpenButton !== null) {
+            STBSUBFORM.modalOpenButton.addEventListener('click', STBSUBFORM.openModal);
+        }
+        if (STBSUBFORM.modalCloseButton !== null) {
+            STBSUBFORM.modalCloseButton.addEventListener('click', STBSUBFORM.closeModal);
+        }
+        if (STBSUBFORM.modalBgButton !== null) {
+            STBSUBFORM.modalBgButton.addEventListener('click', STBSUBFORM.closeModal);
+        }
+
+      </script>
+    </div>
+
+  </div>
+
+
+  </div>
+
+
+</div>

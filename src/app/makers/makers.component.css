@@ -1,0 +1,157 @@
+body        { font-family: 'NanumSquare', sans-serif; }
+.normal     { font-weight: 400;  }
+.bold       { font-weight: 700;  }
+.bolder     { font-weight: 800; }
+.light      { font-weight: 300; }
+
+#container{
+  height : 924px;
+  left: 0;
+  bottom: 0;
+  right : 0;
+  width: 100vw;
+  /* background-color: rgba(149, 252, 205, 0.26); */
+  padding : 0;
+  margin : 0;
+  float:left;
+  display : flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'NanumSquare', sans-serif;
+  /* border: 3px solid  red; */
+}
+#header{
+  height : 60px;
+  /* margin : auto; */
+  /* width : 50%; */
+  /* position: absolute; */
+  /* top: 50%; */
+  /* -ms-transform: translateY(-50%); */
+  /* transform: translateY(-50%); */
+  /* vertical-align: middle; */
+  /* vertical-align: middle; */
+  /* border: 3px solid  green; */
+  /* padding: 10px; */
+  margin : 0px;
+  margin-top : 196px;
+  font-family: NanumSquareR;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  /* border : 1px solid blue; */
+  flex : 1;
+
+  justify-content: center;
+  align-items: center;
+  font-family: 'NanumSquare', sans-serif;
+}
+.title{
+  font-family: NanumSquareR;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: center;
+  color: #371db4;
+  font-family: 'NanumSquare', sans-serif;
+}
+.subtitle {
+  font-family: NanumSquareR;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.94;
+  letter-spacing: normal;
+  text-align: center;
+  color: #371db4;
+  font-family: 'NanumSquare', sans-serif;
+}
+.name{
+  margin-top : 25px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.94;
+  letter-spacing: normal;
+  text-align: center;
+  color: #371db4;
+  padding : 0;
+  font-size : 18px;
+}
+.introduction{
+  /* border : solid 1px green; */
+  font-size : 16px;
+  margin-top : 23px;
+  padding : 0;
+
+  font-stretch: normal;
+  line-height: 1.94;
+  letter-spacing: normal;
+  text-align: center;
+  color: #371db4;
+  height : 127px;
+  weight : 433px;
+}
+#body{
+  width:100%;
+  /* border: 2px dashed purple; */
+  display:flex;
+  flex-direction : row;
+  flex : 1;
+  margin-top : 137px;
+}
+.person{
+  /* border: 2px solid yellow; */
+  box-sizing: border-box;
+  float:left;
+  width : 390px;
+  margin : 3px;
+  padding : 0;
+  flex : 1 ;
+  /* border:0; */
+  display : flex;
+  flex-direction:column;
+  /* justify-content: center; */
+  align-items: center;
+}
+.icon{
+  width: 106px;
+  height: 102px;
+  object-fit: contain;
+}
+@media screen and (max-width: 1200px) {
+#container{
+  height : 1500px;
+  /* border : dashed blue 1px ; */
+}
+#body{
+  width:100%;
+  /* border: 2px dashed purple; */
+  display:flex;
+  flex-direction : column;
+  flex : 1;
+  align-items: center;
+  justify-content: center;
+  /* border : 1px solid red; */
+  margin-top : 120px;
+}
+#header{
+  margin-top : 30px;
+  border : green solid 1px;
+}
+.person{
+  margin-top : 30px;
+  width  : 100%;
+  flex : 1;
+  min-height : 300px;
+  /* border : black 1px solid; */
+}
+.introduction{
+  font-size : 18px;
+}
+
+    /* 모바일에 사용될 스트일 시트를 여기에 작성합니다. */
+}

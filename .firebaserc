@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "videojockey-883a1": {
+      "hosting": {
+        "VideoJockeyPhase2": [
+          "videojockey-883a1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "videojockey-883a1"
+  }
+}

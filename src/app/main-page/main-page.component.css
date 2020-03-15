@@ -1,0 +1,19 @@
+#container{
+  display: flex;
+  flex-direction : column;
+  height:100%;
+  font-family: 'NanumSquare', sans-serif;
+}
+.cell{
+    border: 1px solid blue;
+    /* box-sizing: border-box; */
+    /* float:left; */
+    width : 100%;
+    margin : 0;
+    padding : 0;
+    border:0;
+}
+.cell .footer{
+  height : 100px;
+  margin-top:auto;
+}
