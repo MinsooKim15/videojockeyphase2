@@ -155,3 +155,17 @@ body        { font-family: 'NanumSquare', sans-serif; }
 
     /* 모바일에 사용될 스트일 시트를 여기에 작성합니다. */
 }
+
+
+/* iphone 6,7,8용 */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+  .person{
+    max-width : 330px;
+  }
+  .introduction{
+    font-size : 14px;
+  }
+
+}

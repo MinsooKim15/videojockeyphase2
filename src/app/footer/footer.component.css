@@ -1,5 +1,5 @@
 #container{
-  border: solid 1px #707070;
+  /* border: solid 1px #707070; */
   background-color: #371db4;
   /* height : 125px; */
   /* position: fixed; */
@@ -34,4 +34,18 @@ a {
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
+}
+/* iphone 6,7,8용 */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+  #container{
+    width : 375px;
+    /* width: 100%; */
+    flex : 1;
+  }
+  #content{
+    max-width : 375px;
+  }
+
 }
