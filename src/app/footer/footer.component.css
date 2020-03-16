@@ -40,12 +40,13 @@ a {
 and (min-device-width : 375px)
 and (max-device-width : 667px) {
   #container{
-    width : 375px;
-    /* width: 100%; */
+    /* width : 375px; */
+    width: 100%;
     flex : 1;
   }
   #content{
-    max-width : 375px;
+    width : 100%;
+    /* max-width : 375px; */
   }
 
 }

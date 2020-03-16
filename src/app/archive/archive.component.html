@@ -21,10 +21,9 @@
           </div>
           <div class= "mail-title mobile" *ngIf = "mail.id < 1000">
             <p>Vol {{mail.id}}. {{(mail.mailTitle.length > 22)?(mail.mailTitle|slice:0:22)+'...':(mail.mailTitle)}}</p>
-            <p><{{mail.filmTitle}}></p>
+            <p *ngIf = "mail.filmTitle"><{{mail.filmTitle}}></p>
           </div>
           <div class= "mail-title special mobile" *ngIf = "mail.id > 1000">
-
           <p>{{mail.mailTitle}}</p>
           </div>
         </a>
