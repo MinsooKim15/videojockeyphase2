@@ -96,3 +96,37 @@ body        { font-family: 'NanumSquare', sans-serif; }
 
   /* border : 3px solid purple; */
 }
+/* iphone 6,7,8용 + iphone 6,7,8 plus에도 적용됨 */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+  .title{
+    font-size: 26px;
+  }
+  .subtitle{
+    font-size: 16px;
+  }
+
+}
+/* galaxy S6용  */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 4) {
+    .title{
+      font-size: 26px;
+    }
+    .subtitle{
+      font-size: 16px;
+    }
+}
+/*Galaxy S7 and S8 */
+@media only screen and (min-device-width : 360px) and (max-device-width : 640px){
+
+  .title{
+    font-size: 26px;
+  }
+  .subtitle{
+    font-size: 16px;
+  }
+}

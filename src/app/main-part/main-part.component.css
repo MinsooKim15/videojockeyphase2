@@ -38,22 +38,24 @@ body        { font-family: 'NanumSquare', sans-serif; }
 }
 #container {
   /* position:relative; */
-  height: 1077px;
+  height: 1150px;
   /* border : 1px solid green; */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   font-family: 'NanumSquare', sans-serif;
-  /* border : 1px blue solid; */
 }
 #container-real{
   height: 100%;
+  width : 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 3;
+  /* border:1px blue dashed; */
+  margin : 0 0 0 0;
 }
 #pentagon1 {
   position: absolute;
@@ -104,7 +106,7 @@ body        { font-family: 'NanumSquare', sans-serif; }
   z-index: 1;
 }
 #container-for-icons{
-  width : 1200px;
+  width : 100%;
 }
 #bigCircle1 {
   position: absolute;
@@ -203,7 +205,6 @@ body        { font-family: 'NanumSquare', sans-serif; }
 #header .tape{
   width: 235px;
   height: 139px;
-
   object-fit: contain;
   flex:1;
   padding : 0;
@@ -218,7 +219,6 @@ body        { font-family: 'NanumSquare', sans-serif; }
   margin-top : 3px;
   padding : 0;
   font-family: 'NanumSquare', sans-serif;
-
   /* border : 1px solid black; */
   /* border : 1px solid blue; */
 }
@@ -228,24 +228,20 @@ body        { font-family: 'NanumSquare', sans-serif; }
     margin: 0;
     padding: 0;
     font-size: 14px;
-    /* border:0; */
+    border:0;
     color:#333;
     box-sizing: border-box;
-    /* border : 1px dashed green; */
 }
 #stb_subscribe {
     width: 100%;
     background-color: #fff;
-    border : 1px dashed green;
-    /* border: none #b4b4b4; */
+    border: none #b4b4b4;
     padding: 30px;
     margin: 0;
     box-sizing: border-box;
-    /* border : 1px solid green; */
 }
 
 #stb_subscribe .stb_header {
-    /* border : 1px dashed green; */
     width: 100%;
     overflow: hidden;
     text-align: left;
@@ -269,20 +265,17 @@ body        { font-family: 'NanumSquare', sans-serif; }
     font-size: 14px;
     line-height: 1.71;
     color: #333;
-    /* border : 1px solid green; */
 }
 
 #stb_subscribe .stb_form_description a {
     text-decoration: underline;
     color: #3e81f6;
-    /* border : 1px solid green; */
 }
 
 #stb_subscribe .stb_form_set {
     padding-bottom: 25px;
     overflow: hidden;
     position: relative;
-    /* border : 1px solid green; */
 }
 
 #stb_subscribe .stb_form_set .stb_form_set_label {
@@ -378,7 +371,6 @@ body        { font-family: 'NanumSquare', sans-serif; }
     display: none;
     padding: 20px 0 0 0;
     text-align: left;
-    /* border : 1px solid green; */
 }
 
 #stb_subscribe .stb_form_result p {
@@ -394,6 +386,8 @@ body        { font-family: 'NanumSquare', sans-serif; }
 }
 
 
+
+
 @media ( max-width: 1000px) {
   #container {
     width: auto;
@@ -405,6 +399,7 @@ body        { font-family: 'NanumSquare', sans-serif; }
   #header .title{
     width : 100%;
     height : auto;
+    min-height : 100px;
     max-width : 500px;
     min-width : 427px;
     margin-top : 3px;
@@ -428,7 +423,7 @@ body        { font-family: 'NanumSquare', sans-serif; }
       left: calc(100%/20);
     }
     #pentagon2 {
-      right : calc(100%/20);
+      right : calc(100%/19);
     }
     #bigCircle1 {
       left : calc(100%/4);
@@ -447,6 +442,84 @@ body        { font-family: 'NanumSquare', sans-serif; }
     }
 
 }
+/* galaxy S6용  */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 4) {
+    #subscription{
+      max-width : 330px;
+    }
+    #stb_subscribe{
+      max-width : 330px;
+    }
+    .part2{
+      font-size : 20px;
+    }
+    .part1{
+      font-size : 16px;
+    }
+    .part3{
+      font-size : 16px;
+    }
+    #stb_subscribe .stb_form_set .stb_form_set_label{
+      font-size : 16px;
+    }
+    #stb_subscribe .stb_form_submit_button{
+      font-size : 16px;
+    }
+}
+/*Galaxy S7 and S8 */
+@media only screen and (min-device-width : 360px) and (max-device-width : 640px){
+
+  #subscription{
+    max-width : 330px;
+  }
+  #stb_subscribe{
+    max-width : 330px;
+  }
+  .part2{
+    font-size : 20px;
+  }
+  .part1{
+    font-size : 16px;
+  }
+  .part3{
+    font-size : 16px;
+  }
+  #stb_subscribe .stb_form_set .stb_form_set_label{
+    font-size : 16px;
+  }
+  #stb_subscribe .stb_form_submit_button{
+    font-size : 16px;
+  }
+}
+
+
+
+/* iPhone 6,7,8 plus */
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px) {
+  #subscription{
+    max-width : 370px;
+  }
+  #stb_subscribe {
+      max-width: 360px;
+      /* background-color: green; */
+      /* border : 1px dashed green; */
+      border: none #b4b4b4;
+      padding: 30px;
+      margin: 0;
+      box-sizing: border-box;
+      /* border : 1px solid green; */
+  }
+  #container-real{
+    width : 412px;
+  }
+}
+
+
 /* iphone 6,7,8용 */
 @media only screen
 and (min-device-width : 375px)
@@ -456,7 +529,7 @@ and (max-device-width : 667px) {
   }
   #stb_subscribe {
       max-width: 360px;
-      background-color: green;
+      /* background-color: green; */
       /* border : 1px dashed green; */
       border: none #b4b4b4;
       padding: 30px;
@@ -467,9 +540,16 @@ and (max-device-width : 667px) {
   #header .title{
     width : 100%;
     height : auto;
+    min-height : 200px;
     max-width : 360px;
     min-width : 300px;
   }
+  /* #header .title{
+    width : 100%;
+    height : auto;
+    max-width : 360px;
+    min-width : 300px;
+  } */
   #pentagon1 {
     top : 240px;
     left: calc(100%/10);
@@ -501,10 +581,26 @@ and (max-device-width : 667px) {
     max-width : 360px;
   }
   #header{
-    top : 30px
+    top : 0px;
+    margin-top : 0px;
   }
   #content{
-    margin-top : 110px;
+    margin-top : 0px;
+  }
+  .part2{
+    font-size : 20px;
+  }
+  .part1{
+    font-size : 16px;
+  }
+  .part3{
+    font-size : 16px;
+  }
+  #stb_subscribe .stb_form_set .stb_form_set_label{
+    font-size : 16px;
+  }
+  #stb_subscribe .stb_form_submit_button{
+    font-size : 16px;
   }
 
 }
