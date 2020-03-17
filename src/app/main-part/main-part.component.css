@@ -81,6 +81,8 @@ body        { font-family: 'NanumSquare', sans-serif; }
   border-color: transparent transparent #9e8de3;
   z-index: 1;
 }
+
+
 #pentagon2 {
   position: absolute;
   right : calc(100%/6);
@@ -285,7 +287,7 @@ body        { font-family: 'NanumSquare', sans-serif; }
         font-size: 18px;
     display: block;
         text-align: center;
-        font-family: 'Karla', sans-serif;
+        font-family: 'NanumSquare', sans-serif;
 
 }
 
@@ -297,7 +299,7 @@ body        { font-family: 'NanumSquare', sans-serif; }
         border-radius: 4px;
         background-color: #d9ffee;
         font-color: #2cacc3;
-        font-family: 'Karla', sans-serif;
+        font-family: 'NanumSquare', sans-serif;
         border-radius: 10px;
 }
 
