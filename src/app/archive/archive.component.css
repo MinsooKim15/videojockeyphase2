@@ -1,4 +1,4 @@
-0body        { font-family: 'NanumSquare', sans-serif; }
+body        { font-family: 'NanumSquare', sans-serif; }
 .normal     { font-weight: 400; font-size : 18px; }
 .bold       { font-weight: 700; }
 .bolder     { font-weight: 800 }
@@ -8,7 +8,7 @@
   position : relative;
   background-color : #e3fef2;
   float: left;
-  height : 100vh;
+  height : 100%;
   width : 100%;
   margin: 0;
   left: 0;
@@ -32,7 +32,7 @@
 }
 #header{
   display: flex;
-  flex : 0 0 430px;
+  flex : 0 1 430px;
   flex-direction : column;
   /* border : 1px solid red; */
   text-align: left;
@@ -227,7 +227,7 @@
   #header{
     width : 82%;
     flex-direction : row;
-    flex : 0;
+    flex : 1;
     /* align-items: center; */
     justify-content : center;
     align-items: center;
@@ -270,6 +270,46 @@
   text-align : center;
 
 }
+#navigation{
+  margin-top : 3px;
+}
+#triangle{
+  position : absolute;
+  margin-top : -10px;
+  margin-left : 3px;
+  width: 0 ;
+  height: 0 ;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 24px solid rgba(55, 29, 180, 0.16);
+  transform : rotate(50deg);
+}
+.page-number span{
+    display: block;
+    width: 10px;
+    height: 10px;
+    font-size: 14px;
+    margin-left : 5px;
+    margin-top : 5px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.custom-pagination .page-number{
+    display: inline-block;
+    /* padding: 5px 12px; */
+    /* background: #afffe6; */
+    margin: 0px 6px;
+    width : 30px;
+    height : 30px;
+         /* width: 0;
+      height: 0;
+      border-top: 50px solid transparent;
+      border-right: 100px solid red;
+      border-bottom: 50px solid transparent; */
+}
+
 .box .pc{
   display: none;
 }
@@ -311,6 +351,7 @@
   .box:active a .mail-title{
     color: #ffffff;
   }
+
 
   .box:active{
   background-color: #371db4;

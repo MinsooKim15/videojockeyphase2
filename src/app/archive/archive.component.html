@@ -30,7 +30,7 @@
       </div>
     </div>
     <div id = "navigation">
-         <pagination-template #p="paginationApi" [id]="config.id" (pageChange)="config.currentPage = $event">
+         <pagination-template #p="paginationApi" [maxSize] ="maxSize" [id]="config.id" (pageChange)="config.currentPage = $event">
 
 
 
