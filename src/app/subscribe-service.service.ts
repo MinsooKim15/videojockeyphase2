@@ -9,11 +9,32 @@ export class SubscribeServiceService {
   apiUrl = "https://stibee.com/api/v1.0/lists/tsnBhVYz3gO7bWI6sWPFYsGSVD6R/public/subscribers"
   constructor(
   private http: HttpClient) { };
-  test(){
-  }
-  requestNewSubscriber(email:string){
+  validateEmail(email:string){
+    var msg = ""
+    var validated = true
+    if (email.length == 0){
 
-    return this.http.post('https://stibee.com/api/v1.0/lists/tsnBhVYz3gO7bWI6sWPFYsGSVD6R/public/subscribers', "email=newnewtesttest@test.com",{responseType:"text"})
+      msg = "이메일 주소를 입력하세요."
+      validated = false
+    }
+    if (!this.validateEmailIndetail(email)){
+        msg = "잘못된 이메일 주소입니다."
+        validated = false
+    }
+    return {
+      message : msg,
+      validated : validated
+    }
+
+  }
+  validateEmailIndetail(email:string){
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  requestNewSubscriber(email:string){
+    var paramMail = "email="+email
+    return this.http.post('https://stibee.com/api/v1.0/lists/tsnBhVYz3gO7bWI6sWPFYsGSVD6R/public/subscribers', paramMail,{responseType:"text"})
   };
   getMsgAndStatus(data:string){
     var errorStatus = false

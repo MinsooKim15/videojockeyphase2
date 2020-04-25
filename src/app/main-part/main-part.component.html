@@ -57,8 +57,7 @@
               <fieldset class="stb_form_set">
                   <label for="stb_email" class="stb_form_set_label">Email Address</label>
                   <input type="email" [(ngModel)] = "emailAddress" class="stb_form_set_input" id="stb_email" name="email" >
-                  <div *ngIf="errorStatus">{{msg}}</div>
-                  <div class="stb_form_msg_error" id="stb_email_error"></div>
+                  <div *ngIf="errorStatus" class="stb_form_msg_error" id="stb_email_error">{{errorMsg}}</div>
               </fieldset>
 
               <fieldset class="stb_form_set_submit">
