@@ -310,7 +310,7 @@ body        { font-family: 'NanumSquare', sans-serif; }
     color: #f95a1f;
     padding: 5px 0;
     font-size: 13px;
-    
+
     left: 0;
     bottom: 0;
 }
@@ -555,6 +555,11 @@ and (max-device-width : 667px) {
     margin-top : 50px;
     /* border : 1px solid red; */
   }
+  img{
+    width : 70%;
+    height : 70%;
+    object-fit : contain;
+  }
   /* #header .title{
     width : 100%;
     height : auto;
@@ -563,20 +568,26 @@ and (max-device-width : 667px) {
   } */
   /* 왼쪽 친구들 */
   #polygon1 {
-    top : 90px;
+    top : 100px;
     left: calc(100%/22);
   }
+  #bigCircle1 {
+    width: 33px;
+    height: 33px;
+    top : 40px;
+    left : calc(100%/4);
+  }
   #bigCircle2 {
-    top : 410px;
+    width: 33px;
+    height: 33px;
+    top : 380px;
     left : calc(100%/20);
   }
   #smallCircle2 {
-    top : 280px;
-    left : calc(100%/7);
-  }
-  #bigCircle1 {
-    top : 20px;
-    left : calc(100%/4);
+    top : 240px;
+    width: 16px;
+    height: 16px;
+    left : calc(100%/5);
   }
 
 
@@ -587,12 +598,16 @@ and (max-device-width : 667px) {
   }
 
   #smallCircle3{
+    width: 16px;
+    height: 16px;
     top : 100px;
     right : calc(100%/6);
   }
   #smallCircle1 {
-    top : 380px;
-    right : calc(100%/5);
+    width: 16px;
+    height: 16px;
+    top : 360px;
+    right : calc(100%/20);
   }
 
   #container-real{

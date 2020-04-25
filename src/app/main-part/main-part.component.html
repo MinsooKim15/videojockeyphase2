@@ -55,14 +55,14 @@
 
 
               <fieldset class="stb_form_set">
-                  <label for="stb_email" class="stb_form_set_label">Email Address</label>
+                  <label for="stb_email" class="stb_form_set_label">메일 주소</label>
                   <input type="email" [(ngModel)] = "emailAddress" class="stb_form_set_input" id="stb_email" name="email" >
                   <div *ngIf="errorStatus" class="stb_form_msg_error" id="stb_email_error">{{errorMsg}}</div>
               </fieldset>
 
               <fieldset class="stb_form_set_submit">
                   <button (click)= "onClickSubscribe()" type="submit" class="stb_form_submit_button" id="stb_form_submit_button"  style="background-color: rgb(55, 29, 180); color: rgb(255, 255, 255)"
-  >Subscribe</button>
+  >구독하기</button>
               </fieldset>
           </form>
           <div class="stb_form_result" id="stb_form_result">
