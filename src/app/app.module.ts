@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import {MailService} from './mail.service'
+import {MailService} from './mail.service';
+
+import {IntervalService} from './interval.service';
 
 import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
@@ -18,6 +20,11 @@ import { RouterModule, Routes } from '@angular/router';
 import {MainPageComponent} from './main-page/main-page.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 
+// Stibee API 호출을 위한
+import {HttpClientModule} from "@angular/common/http";
+
+import {DomParser} from 'dom-parser';
+
 const appRoutes: Routes = [
   { path: 'archive', component: ArchiveComponent  },
   { path: '', component: MainPageComponent },
@@ -26,6 +33,7 @@ const appRoutes: Routes = [
 @NgModule({
   imports:      [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     NgxPaginationModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -43,7 +51,7 @@ const appRoutes: Routes = [
     ArchiveComponent,
     MainPageComponent
     ],
-  providers : [ MailService,AngularFirestoreModule],
+  providers : [ MailService,IntervalService,AngularFirestoreModule],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

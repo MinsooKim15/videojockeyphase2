@@ -1,13 +1,18 @@
 <div id ="container">
   <!-- <div id="container-for-icons"> -->
       <!-- <div id = "background-left">  -->
-      <div id= "pentagon1"></div>
+      <div id= "polygon1">
+        <img src="https://firebasestorage.googleapis.com/v0/b/videojockey-883a1.appspot.com/o/Polygon.png?alt=media&token=e4313a32-a7ce-4a69-b670-3f5926a5055d">
+      </div>
 
       <div id = "bigCircle1"></div>
       <div id= "bigCircle2"></div>
       <div id= "smallCircle1"></div>
 
-      <div id= "pentagon2"></div>
+
+      <div id= "polygon2">
+        <img src="https://firebasestorage.googleapis.com/v0/b/videojockey-883a1.appspot.com/o/Polygon2.png?alt=media&token=a437f2c7-20fb-4add-8232-4c72bfe9c700">
+      </div>
       <div id= "smallCircle2"></div>
       <div id= "smallCircle3"></div>
   <!-- </div> -->
@@ -44,179 +49,31 @@
       <style>
 
       </style>
-          <div id="stb_subscribe">
+      <div id="stb_subscribe" *ngIf = "(clicked == false)||((clicked==true)&&(errorStatus==true))">
 
-              <form action="https://stibee.com/api/v1.0/lists/tsnBhVYz3gO7bWI6sWPFYsGSVD6R/public/subscribers" method="POST" target="_blank" accept-charset="utf-8" class="stb_form" name="stb_subscribe_form" id="stb_subscribe_form" novalidate="">
+          <form action="https://stibee.com/api/v1.0/lists/tsnBhVYz3gO7bWI6sWPFYsGSVD6R/public/subscribers" method="POST" target="_blank" accept-charset="utf-8" class="stb_form" name="stb_subscribe_form" id="stb_subscribe_form" novalidate="">
 
 
-                  <fieldset class="stb_form_set">
-                      <label for="stb_email" class="stb_form_set_label bold">이메일 주소</label>
-                      <input type="email" class="stb_form_set_input" id="stb_email" name="email">
+              <fieldset class="stb_form_set">
+                  <label for="stb_email" class="stb_form_set_label">Email Address</label>
+                  <input type="email" [(ngModel)] = "emailAddress" class="stb_form_set_input" id="stb_email" name="email" >
+                  <div *ngIf="errorStatus">{{msg}}</div>
+                  <div class="stb_form_msg_error" id="stb_email_error"></div>
+              </fieldset>
 
-                      <div class="stb_form_msg_error" id="stb_email_error"></div>
-                  </fieldset>
-
-                  <fieldset class="stb_form_set_submit">
-                      <button type="submit" class="stb_form_submit_button" id="stb_form_submit_button" style="background-color: rgb(55, 29, 180); color: rgb(255, 255, 255)"
-      >구독하기</button>
-                  </fieldset>
-              </form>
-              <div class="stb_form_result" id="stb_form_result">
-              </div>
+              <fieldset class="stb_form_set_submit">
+                  <button (click)= "onClickSubscribe()" type="submit" class="stb_form_submit_button" id="stb_form_submit_button"  style="background-color: rgb(55, 29, 180); color: rgb(255, 255, 255)"
+  >Subscribe</button>
+              </fieldset>
+          </form>
+          <div class="stb_form_result" id="stb_form_result">
           </div>
-          <div id ="stb_form_done">
-          </div>
+      </div>
+      <div id ="stb_form_done" *ngIf= "(errorStatus == false) && (clicked == true)">
+        <p>구독 완료</p>
+        <p>메일함에서 <strong>웰컴 메일</strong>을 확인해주세요!</p>
+      </div>
 
-      <script>
-        var STBSUBFORM = {
-            init: function () {
-                var errorMsgs = document.getElementsByClassName('stb_form_msg_error');
-                errorMsgs = [].slice.call(errorMsgs);
-                for (var index = 0; index < errorMsgs.length; index++) {
-                    errorMsgs[index].style.display = 'none';
-                }
-                var resultDom = document.getElementById('stb_form_result');
-                resultDom.style.display = 'none';
-                resultDom.className = resultDom.className.replace('success', '');
-                resultDom.className = resultDom.className.replace('fail', '');
-            },
-            formRequest: function (e) {
-                e.preventDefault();
-                STBSUBFORM.init();
-
-                var value = STBSUBFORM.getValue();
-                if (STBSUBFORM.validate(value)) {
-                    var value = STBSUBFORM.serializeValue(value);
-                    value = value.replace('&policy=stb_policy_true', '');
-                    var endpoint = STBSUBFORM.form.action;
-                    STBSUBFORM.xhrRequest(endpoint, value);
-                }
-            },
-            validateEmail: function (email) {
-                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                return re.test(String(email).toLowerCase());
-            },
-            validate: function (values) {
-                for (var index = 0; index < values.length; index++) {
-                    var item = values[index];
-                    if (item.id === 'stb_email' && item.value.length === 0) {
-                        STBSUBFORM.showError(item.id, '이메일 주소를 입력하세요.');
-                        return false;
-                    }
-                    if (item.id === 'stb_email' && !STBSUBFORM.validateEmail(item.value)) {
-                        STBSUBFORM.showError(item.id, '잘못된 이메일 주소입니다.');
-                        return false;
-                    }
-                    if (item.id === 'stb_policy' && !item.checked) {
-                        STBSUBFORM.showError(item.id, '다시 입력해주세요.');
-                        return false;
-                    }
-                }
-                return true;
-            },
-            showError: function (itemId, msg) {
-                var domName = itemId + '_error';
-                var dom = document.getElementById(domName);
-                dom.innerText = msg;
-                dom.style.display = 'block';
-            },
-            xhrRequest: function (endpoint, value) {
-                if (window.XDomainRequest) {
-                    var xdr = new XDomainRequest();
-                    xdr.open("POST", endpoint);
-                    xdr.onload = function () {
-                        if (xdr.responseText.indexOf('@ERROR_MSG') !== -1) {
-                            STBSUBFORM.showResult(xdr.responseText, 'fail');
-                        } else {
-                            STBSUBFORM.showResult(xdr.responseText, 'success');
-                        }
-                    };
-                    setTimeout(function () {
-                        xdr.send(value);
-                    }, 0);
-                } else {
-                    var xhr = new XMLHttpRequest();
-                    xhr.open("POST", endpoint, true);
-                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                    xhr.onreadystatechange = function () {
-                        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-                            if (this.response.indexOf('@ERROR_MSG') !== -1) {
-                                STBSUBFORM.showResult(this.response, 'fail');
-                            } else {
-                                STBSUBFORM.showResult(this.response, 'success');
-                            }
-                        }
-                    }
-                    xhr.send(value);
-                }
-            },
-            serializeValue: function (nodeList) {
-                nodeList = [].slice.call(nodeList);
-                var serializeText = '';
-                for (var index = 0; index < nodeList.length; index++) {
-                    var itemKey = nodeList[index].id.replace('stb_', '');
-                    serializeText += itemKey + '=';
-                    serializeText += encodeURIComponent(nodeList[index].value);
-                    if (index + 1 !== nodeList.length) {
-                        serializeText += '&';
-                    }
-                }
-                return serializeText;
-            },
-            getValue: function () {
-                var inputValues = document.querySelectorAll('input');
-                return inputValues;
-            },
-            showResult: function (response, status) {
-                var resMsg;
-                var changeResult = document.getElementById('stb_subscribe_form');
-                var resultDom = document.getElementById('stb_form_result');
-                var target = document.getElementById('stb_form_done');
-                var successMsg = '*구독완료*<br>메일함에서 <strong>웰컴 메일</strong>을 확인해 주세요!&nbsp;';
-                if (status === 'fail') {
-                    var resMsg = '<p>' + response.split('ERROR_MSG:')[1].split('-->')[0] + '</p>';
-                } else {
-                    var resMsg = response.split('<div class="msg">')[1].split('</div>')[0];
-                }
-                resultDom.style.display = 'block';
-
-                if (status === 'success') {
-                    resultDom.className += ' success';
-                    changeResult.style.display = 'none';
-                    target.innerHTML = successMsg;
-                    target.style.display = 'block';
-                    resultDom.innerHTML = '';
-                } else if (status === 'fail') {
-                    resultDom.className += ' fail';
-                    resultDom.innerHTML = resMsg;
-                }
-            },
-            openModal: function () {
-                var modal = document.getElementById('stb_form_modal');
-                modal.className = modal.className.replace('blind', '');
-            },
-            closeModal: function () {
-                var modal = document.getElementById('stb_form_modal');
-                modal.className += ' blind';
-            },
-            form: document.getElementById('stb_subscribe_form'),
-            modalOpenButton: document.getElementById('stb_form_modal_open'),
-            modalCloseButton: document.getElementById('stb_form_modal_close'),
-            modalBgButton: document.getElementById('stb_form_modal_bg'),
-        }
-
-        STBSUBFORM.form.addEventListener('submit', STBSUBFORM.formRequest);
-        if (STBSUBFORM.modalOpenButton !== null) {
-            STBSUBFORM.modalOpenButton.addEventListener('click', STBSUBFORM.openModal);
-        }
-        if (STBSUBFORM.modalCloseButton !== null) {
-            STBSUBFORM.modalCloseButton.addEventListener('click', STBSUBFORM.closeModal);
-        }
-        if (STBSUBFORM.modalBgButton !== null) {
-            STBSUBFORM.modalBgButton.addEventListener('click', STBSUBFORM.closeModal);
-        }
-
-      </script>
     </div>
 
   </div>

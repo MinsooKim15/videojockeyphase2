@@ -57,19 +57,19 @@ body        { font-family: 'NanumSquare', sans-serif; }
   /* border:1px blue dashed; */
   margin : 0 0 0 0;
 }
-#pentagon1 {
+#polygon1 {
   position: absolute;
   left: calc(100%/6);
   transform: rotate( -35deg );
   top: 240px;
-  width: 54px;
-  box-sizing: content-box;
-  border-width: 50px 18px 0;
-  border-style: solid;
-  border-color: #9e8de3 transparent;
-  z-index: 1;
+  /* width: 54px; */
+  /* box-sizing: content-box; */
+  /* border-width: 50px 18px 0; */
+  /* border-style: solid; */
+  /* border-color: #9e8de3 transparent; */
+  z-index: 2;
 }
-#pentagon1:before {
+/* #pentagon1:before {
   content: "";
   position: absolute;
   height: 0;
@@ -79,23 +79,23 @@ body        { font-family: 'NanumSquare', sans-serif; }
   border-width: 0 45px 35px;
   border-style: solid;
   border-color: transparent transparent #9e8de3;
-  z-index: 1;
-}
+  z-index: 2;
+} */
 
 
-#pentagon2 {
+#polygon2 {
   position: absolute;
   right : calc(100%/6);
   transform: rotate( -35deg );
   top : 371.5px;
-  width: 54px;
-  box-sizing: content-box;
+  /* width: 54px; */
+  /* box-sizing: content-box;
   border-width: 50px 18px 0;
   border-style: solid;
-  border-color: #95fccd transparent;
-  z-index: 1;
+  border-color: #95fccd transparent; */
+  z-index: 2;
 }
-#pentagon2:before {
+/* #pentagon2:before {
   content: "";
   position: absolute;
   height: 0;
@@ -105,8 +105,8 @@ body        { font-family: 'NanumSquare', sans-serif; }
   border-width: 0 45px 35px;
   border-style: solid;
   border-color: transparent transparent #95fccd;
-  z-index: 1;
-}
+  z-index: 2;
+} */
 #container-for-icons{
   width : 100%;
 }
@@ -118,7 +118,7 @@ body        { font-family: 'NanumSquare', sans-serif; }
   height: 55px;
   background: #95fccd;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 2;
 }
 #bigCircle2 {
   position: absolute;
@@ -128,7 +128,7 @@ body        { font-family: 'NanumSquare', sans-serif; }
   height: 55px;
   background: #95fccd;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 2;
 }
 #smallCircle1 {
   position: absolute;
@@ -138,7 +138,7 @@ body        { font-family: 'NanumSquare', sans-serif; }
   height: 22px;
   background: #95fccd;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 2;
 }
 #smallCircle2 {
   position: absolute;
@@ -148,7 +148,7 @@ body        { font-family: 'NanumSquare', sans-serif; }
   height: 22px;
   background-color: #9e8de3;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 2;
 }
 #smallCircle3{
   position: absolute;
@@ -158,9 +158,8 @@ body        { font-family: 'NanumSquare', sans-serif; }
   height: 22px;
   background-color: #9e8de3;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 2;
 }
-
 
 #header{
   /* position: absolute;
@@ -202,6 +201,7 @@ body        { font-family: 'NanumSquare', sans-serif; }
   flex-direction:column;
   align-items: center;
   justify-content: center;
+  z-index : 1;
 }
 
 #header .tape{
@@ -233,6 +233,7 @@ body        { font-family: 'NanumSquare', sans-serif; }
     border:0;
     color:#333;
     box-sizing: border-box;
+    z-index : 1;
 }
 #stb_subscribe {
     width: 100%;
@@ -241,6 +242,7 @@ body        { font-family: 'NanumSquare', sans-serif; }
     padding: 30px;
     margin: 0;
     box-sizing: border-box;
+    z-index : 1;
 }
 
 #stb_subscribe .stb_header {
@@ -275,7 +277,7 @@ body        { font-family: 'NanumSquare', sans-serif; }
 }
 
 #stb_subscribe .stb_form_set {
-    padding-bottom: 25px;
+    padding-bottom: 10px;
     overflow: hidden;
     position: relative;
 }
@@ -284,7 +286,7 @@ body        { font-family: 'NanumSquare', sans-serif; }
     padding-bottom: 10px;
         color: #371db4;
         /* font-style: italic; */
-        font-size: 18px;
+        font-size: 16px;
     display: block;
         text-align: center;
         font-family: 'NanumSquare', sans-serif;
@@ -307,7 +309,7 @@ body        { font-family: 'NanumSquare', sans-serif; }
     display: none;
     color: #f95a1f;
     padding: 5px 0;
-    font-size: 12px;
+    font-size: 13px;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -332,7 +334,7 @@ body        { font-family: 'NanumSquare', sans-serif; }
 }
 #stb_form_done {
   text-align:center;
-  font-size:13px;
+  font-size:16px;
   color: #ff3366;
   font-family:helvetica neue, helvetica, arial, verdana, sans-serif;
 }
@@ -354,9 +356,9 @@ body        { font-family: 'NanumSquare', sans-serif; }
 
 #stb_subscribe .stb_form_submit_button {
     width: 100%;
-    height: 48px;
+    height: 40px;
     background: #371db4;
-    font-size: 18px;
+    font-size: 16px;
     color:#fff;
     padding: 0 22px;
     cursor:pointer;
@@ -421,10 +423,10 @@ body        { font-family: 'NanumSquare', sans-serif; }
     margin-top : 157px;
     /* border : 1px solid red; */
   }
-    #pentagon1 {
+    #polygon1 {
       left: calc(100%/20);
     }
-    #pentagon2 {
+    #polygon2 {
       right : calc(100%/19);
     }
     #bigCircle1 {
@@ -526,6 +528,9 @@ and (max-device-width : 736px) {
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 667px) {
+  #container{
+    height : 667px;
+  }
   #subscription{
     max-width : 370px;
   }
@@ -540,11 +545,15 @@ and (max-device-width : 667px) {
       /* border : 1px solid green; */
   }
   #header .title{
-    width : 100%;
+    /* width : 100%; */
     height : auto;
-    min-height : 200px;
-    max-width : 360px;
+    max-width : 300px;
     min-width : 300px;
+    margin-top : 0px;
+  }
+  #header .tape{
+    margin-top : 50px;
+    /* border : 1px solid red; */
   }
   /* #header .title{
     width : 100%;
@@ -552,33 +561,40 @@ and (max-device-width : 667px) {
     max-width : 360px;
     min-width : 300px;
   } */
-  #pentagon1 {
-    top : 240px;
-    left: calc(100%/10);
-  }
-  #pentagon2 {
-    top : 420px;
-    right : calc(100%/20);
-  }
-  #bigCircle1 {
-    top : 80px;
-    left : calc(100%/4);
+  /* 왼쪽 친구들 */
+  #polygon1 {
+    top : 90px;
+    left: calc(100%/22);
   }
   #bigCircle2 {
-    top : 790px;
+    top : 410px;
     left : calc(100%/20);
   }
-  #smallCircle1 {
-    top : 710px;
+  #smallCircle2 {
+    top : 280px;
+    left : calc(100%/7);
+  }
+  #bigCircle1 {
+    top : 20px;
+    left : calc(100%/4);
+  }
+
+
+  /* 오른쪽 친구들 */
+  #polygon2 {
+    top : 200px;
+    right : calc(100%/20);
+  }
+
+  #smallCircle3{
+    top : 100px;
     right : calc(100%/6);
   }
-  #smallCircle2 {
-    /* top : 790px; */
-    left : calc(100%/10);
+  #smallCircle1 {
+    top : 380px;
+    right : calc(100%/5);
   }
-  #smallCircle3{
-    right : calc(100%/5.5);
-  }
+
   #container-real{
     max-width : 360px;
   }
@@ -591,13 +607,16 @@ and (max-device-width : 667px) {
   }
   .part2{
     font-size : 20px;
+    margin-top : 7px;
   }
   .part1{
-    font-size : 16px;
+    font-size : 14px;
   }
   .part3{
-    font-size : 16px;
+    margin-top : 7px;
+    font-size : 14px;
   }
+
   #stb_subscribe .stb_form_set .stb_form_set_label{
     font-size : 16px;
   }

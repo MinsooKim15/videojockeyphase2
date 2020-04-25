@@ -1,6 +1,8 @@
 import { HostListener,Component, OnInit } from '@angular/core';
 import {Mail} from '../mail';
 import {MailService} from '../mail.service';
+import {IntervalService} from '../interval.service';
+
 
 @Component({
   selector: 'app-archive',
@@ -13,11 +15,13 @@ export class ArchiveComponent implements OnInit {
   numbers = [1,2,3,4,5];
   config: any;
   maxSize = 6;
+  interval: Number;
+  // interval -> 데이터 노출 주기
   // maxSize => 최대 노출 페이지 수
   public innerWidth: any;
   public innerHeight: any;
 
-  constructor(private mailService : MailService) {
+  constructor(private mailService : MailService, private intervalService : IntervalService) {
     if (window.innerWidth > 1230){
       this.config = {
       itemsPerPage: 10,
@@ -68,7 +72,17 @@ export class ArchiveComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.mailService.getMails().subscribe(data => {
+    this.intervalService.getInterval().then((doc)=>{
+      if(doc.exists){
+        const data = doc.data()
+        this.interval = data["showAfterSend"]
+    }else{
+        this.interval = 3
+    }
+
+    var day = new Date();
+    day.setDate(day.getDate()- Number(this.interval)*7);
+    this.mailService.getMails(day).subscribe(data => {
       this.mails = data.map(e => {
         return {
           id: e.payload.doc.id,
@@ -77,6 +91,7 @@ export class ArchiveComponent implements OnInit {
       })
       this.config.totalItems = this.mails.length
     });
+  })
   }
   pageChanged(event){
     this.config.currentPage = event;
@@ -85,4 +100,5 @@ export class ArchiveComponent implements OnInit {
   setNumber(num : Number): void{
     this.pageNumber = num;
   };
+
 }

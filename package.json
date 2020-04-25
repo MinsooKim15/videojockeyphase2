@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~9.0.3",
     "@angular/router": "~9.0.3",
     "angularfire2": "^5.4.2",
+    "dom-parser": "^0.1.6",
     "firebase": ">= 5.5.7 <8",
     "ngx-pagination": "^5.0.0",
     "rxjs": "~6.5.4",
