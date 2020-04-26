@@ -8,7 +8,7 @@ export class MailService {
   constructor(private firestore:AngularFirestore) { }
   getMails(day : Date){
     // this.mailCollectionRef = this.firestore.collection("mails").orderBy('order field');
-    return  this.firestore.collection('mails', ref => ref.where('published', "<", day).orderBy('published')).snapshotChanges();
+    return  this.firestore.collection('mails', ref => ref.where('published', "<", day).orderBy('published','desc')).snapshotChanges();
   }
   createMail(mail:Mail){
     return this.firestore.collection("mails").add(mail);

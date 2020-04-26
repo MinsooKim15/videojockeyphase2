@@ -9,6 +9,7 @@
     }
   },
   "projects": {
-    "default": "videojockey-883a1"
+    "default": "videojockey-883a1",
+    "staging": "videojockey-staging"
   }
 }
